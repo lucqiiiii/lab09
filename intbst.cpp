@@ -149,17 +149,17 @@ bool IntBST::contains(int value, Node *n) const {
 
 // implement optional challenge methods below
 
-void IntBST::remove(int value, Node* &n){
+//void IntBST::remove(int value, Node* &n){
  // uses removeThis below too
 
 
-}
-void IntBST::removeThis(Node* &n){
+//}
+//void IntBST::removeThis(Node* &n){
  // in turn, uses maxValue below
  
 
-}
-int IntBST::maxValue(Node *n) const {
+//}
+//int IntBST::maxValue(Node *n) const {
 
 
-}
+//}
