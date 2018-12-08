@@ -21,7 +21,7 @@ public:
     bool contains(int value) const;  // true if value is in tree
 
     // suggested signature of optional challenge method:
-    //   void remove(int value);  // remove value from the tree
+    void remove(int value);  // remove value from the tree
 
 private:
 
@@ -47,9 +47,9 @@ private:
     bool contains(int value, Node *n) const; // not used for iterative solution
 
     // suggested signatures of utility functions for optional challenge:
-    // void remove(int value, Node* &n); // uses removeThis below too
-    // void removeThis(Node* &n); // in turn, uses maxValue below
-    // int maxValue(Node *n) const;
+     void remove(int value, Node* &n); // uses removeThis below too
+     void removeThis(Node* &n); // in turn, uses maxValue below
+     int maxValue(Node *n) const;
 };
 
 #endif

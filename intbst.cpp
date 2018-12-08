@@ -102,10 +102,11 @@ int IntBST::sum() const {
 
 // recursive helper for sum
 int IntBST::sum(Node *n) const {
-    if(n){
-        sum(n->left);
-        sum(n->right);
-	return +=(n->info);
+    if(n == NULL){
+        return 0;
+    }
+    else{
+	return (n -> info) + sum(n->left) + sum(n->right);
     }
 }
 
@@ -116,12 +117,49 @@ int IntBST::count() const {
 
 // recursive helper for count
 int IntBST::count(Node *n) const {
-    return 0; // REPLACE THIS NON-SOLUTION
+    if(n == NULL){
+        return 0;
+    }
+    else{
+        return 1 + count(n -> left) + count(n -> right);
+    }
 }
 
 // returns true if value is in the tree; false if not
 bool IntBST::contains(int value) const {
-    return false; // REPLACE THIS NON-SOLUTION
+    return contains(value, root);
+}
+
+bool IntBST::contains(int value, Node *n) const {
+    if(n == NULL){
+        return false;
+    }
+    else{
+        if(n -> info == value){
+            return true;
+        }
+        else if(n -> info > value){
+            return contains(value, n -> left);
+        }
+        else if(n -> info < value){
+            return contains(value, n -> right);
+        }
+    }
 }
 
 // implement optional challenge methods below
+
+void IntBST::remove(int value, Node* &n){
+ // uses removeThis below too
+
+
+}
+void IntBST::removeThis(Node* &n){
+ // in turn, uses maxValue below
+ 
+
+}
+int IntBST::maxValue(Node *n) const {
+
+
+}
